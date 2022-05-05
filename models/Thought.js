@@ -65,3 +65,7 @@ const ThoughtsSchema = new Schema(
   }
 );
 
+// Total count of reactions
+ThoughtsSchema.virtual("reactionCount").get(function () {
+  return this.reactions.length;
+});
