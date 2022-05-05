@@ -21,3 +21,5 @@ router
   .put(updateThoughts)
   .delete(deleteThoughts);
 
+// Takes you to /api/thoughts/:userId <POST request>
+router.route("/:userId").post(createThoughts);
