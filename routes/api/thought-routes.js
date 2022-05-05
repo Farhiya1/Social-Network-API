@@ -14,3 +14,10 @@ const {
 // Takes you to /api/thoughts <GET request>
 router.route("/").get(getAllThoughts);
 
+// Takes you to /api/thoughts/:id <GET, PUT, DELETE request>
+router
+  .route("/:id")
+  .get(getThoughtsById)
+  .put(updateThoughts)
+  .delete(deleteThoughts);
+
