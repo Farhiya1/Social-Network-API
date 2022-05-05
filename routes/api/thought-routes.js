@@ -23,3 +23,12 @@ router
 
 // Takes you to /api/thoughts/:userId <POST request>
 router.route("/:userId").post(createThoughts);
+
+// Takes you to /api/thoughts/:thoughtId/reactions <POST request>
+router.route("/:thoughtId/reactions").post(addReaction);
+
+// Takes you to: /api/thoughts/:thoughtId/reactionId <DELETE request>
+router.route("/:thoughtId/reactions/:reactionId").delete(deleteReaction);
+
+// Exporting module router
+module.exports = router;
