@@ -1,4 +1,8 @@
-// Requiring Mongoose
+// Total count of friends
+UsersSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
+
 const { Schema, model } = require("mongoose");
 
 const UsersSchema = new Schema(
